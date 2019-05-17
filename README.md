@@ -24,6 +24,8 @@ Como API REST permite obtener y editar los registros almacenados (Hits).
     ```
   - Clonar el repositorio e instalar las dependencias.
     ```sh
+    $ git clone https://github.com/carlosirigoyen17/HackerNewsNode.git
+    $ cd HackerNewsNode
     $ npm install
     ```
 
