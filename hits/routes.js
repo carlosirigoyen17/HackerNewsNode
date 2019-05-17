@@ -5,15 +5,13 @@ const controller = require('./controllers');
 router.get('/hits', async (req, res) => {
     try {
         const hits = await controller.getHits();
-        console.log('Succes get DB');
+        console.log('Success get DB');
         res.send(hits);
     } catch (error) {
         res.status(404).send({error});
     } 
 });
 router.put('/hits', async (req, res) => {
-    // Call put controller func
-
     console.log(req.body);
     try {
         const updateHit = await controller.updateHit(req.body.objectID);
@@ -23,6 +21,5 @@ router.put('/hits', async (req, res) => {
     }
     res.send({message: 'Success UPDATE'+ req.body.objectID});
 });
-// construimos las rutas necesarias
 
 module.exports = router;
